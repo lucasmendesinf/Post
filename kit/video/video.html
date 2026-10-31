@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Vídeo LigFlow / Calutec</title>
+<style>
+:root { --accent: #EE3124; --accent-soft: #3A1412; }
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0A0A0A; }
+body { font-family: Saira, Arial, Helvetica, sans-serif; color: #F7F7F7; }
+#bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 45% at 50% 62%, rgba(238,49,36,0.32), rgba(238,49,36,0.08) 55%, rgba(0,0,0,0) 75%), #0A0A0A; }
+.streak { position: absolute; height: 3px; border-radius: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), var(--accent), rgba(0,0,0,0)); opacity: .45; }
+.scene { position: absolute; inset: 0; padding: 0 96px; display: flex; flex-direction: column; justify-content: center; opacity: 0; }
+.title { font-size: 92px; font-weight: 800; line-height: 1.05; text-align: center; letter-spacing: -1px; }
+.title .hl { color: var(--accent); }
+.head { font-size: 66px; font-weight: 800; text-align: center; line-height: 1.1; }
+.head.red { color: var(--accent); text-transform: uppercase; }
+.sub { margin-top: 10px; font-size: 40px; font-weight: 700; text-align: center; color: var(--accent); }
+.pill { align-self: center; margin-top: 18px; padding: 8px 26px; border-radius: 999px; background: #10264D; color: #6EA8FF; font-size: 28px; font-weight: 700; }
+.dot { display: inline-block; width: 22px; height: 22px; border-radius: 999px; background: #22C55E; margin-right: 26px; vertical-align: middle; }
+.search { margin-top: 56px; padding: 28px 32px; border-radius: 18px; background: #161616; border: 2px solid #333; font-size: 34px; font-weight: 500; min-height: 100px; }
+.caret { display: inline-block; width: 3px; height: 38px; background: #F7F7F7; vertical-align: middle; margin-left: 4px; }
+.items { margin-top: 30px; display: flex; flex-direction: column; gap: 18px; }
+.item { display: flex; align-items: center; gap: 22px; padding: 24px 28px; border-radius: 18px; background: #161616; border: 2px solid #2C2C2C; position: relative; }
+.item .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 10px; border-radius: 18px 0 0 18px; }
+.item .txt { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.item .name { font-size: 40px; font-weight: 700; }
+.item .meta { font-size: 26px; font-weight: 500; color: #9A9A9A; }
+.badge { position: relative; min-width: 210px; height: 52px; }
+.badge span { position: absolute; right: 0; top: 0; padding: 8px 20px; border-radius: 10px; font-size: 26px; font-weight: 700; white-space: nowrap; }
+.pin { width: 34px; height: 34px; flex-shrink: 0; }
+.note { margin-top: 44px; text-align: center; font-size: 38px; font-weight: 500; color: #E5E5E5; }
+.card { margin-top: 44px; padding: 34px; border-radius: 22px; background: #161616; border: 2px solid #2C2C2C; }
+.cal { display: flex; align-items: center; gap: 28px; }
+.cal .day { width: 110px; height: 110px; border-radius: 18px; background: #3B82F6; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; }
+.cal .day b { font-size: 22px; letter-spacing: 1px; } .cal .day i { font-style: normal; font-size: 52px; line-height: 1; }
+.sync { margin-top: 26px; padding: 18px; border-radius: 14px; background: #0F2A1B; color: #4ADE80; text-align: center; font-size: 30px; font-weight: 600; }
+.rec { font-size: 32px; font-weight: 700; color: var(--accent); }
+.wave { margin-top: 22px; height: 110px; display: flex; align-items: center; gap: 9px; }
+.wave i { flex: 1; border-radius: 6px; background: #555; }
+.final { align-items: center; }
+.final img { width: 620px; height: 465px; object-fit: contain; }
+.final .lines { margin-top: 40px; font-size: 76px; font-weight: 800; text-align: center; line-height: 1.12; }
+.final .cta { margin-top: 48px; padding: 26px 56px; border-radius: 999px; background: var(--accent); font-size: 44px; font-weight: 800; color: #FFFFFF; }
+.final .tag { margin-top: 34px; font-size: 32px; color: #B7B7B7; font-weight: 500; }
+.logo-small { position: absolute; top: 90px; left: 50%; transform: translateX(-50%); width: 200px; height: 150px; object-fit: contain; opacity: .95; }
+#progress { position: absolute; left: 0; bottom: 0; height: 10px; background: var(--accent); }
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<div id="streaks"></div>
+<div id="stage"></div>
+<div id="progress"></div>
+<script>
+/* window.ROTEIRO e injetado pelo gerar_video.py antes do carregamento. */
+const R = window.ROTEIRO;
+const FADE = 0.45;
+const BADGE = {
+  verde:   ['#0F2A1B', '#4ADE80'],
+  amarelo: ['#3A2E06', '#FACC15'],
+  cinza:   ['#262626', '#A3A3A3'],
+  vermelho:['#3A1412', '#FF6B60'],
+  roxo:    ['#2A1A40', '#C084FC'],
+  azul:    ['#10264D', '#6EA8FF'],
+};
+const BARRA = { vermelho: '#EF4444', amarelo: '#FACC15', roxo: '#A855F7', verde: '#22C55E', azul: '#3B82F6', laranja: '#FF8A00' };
+const ease = x => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
+const clamp01 = x => Math.min(Math.max(x, 0), 1);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+document.documentElement.style.setProperty('--accent', R.cor || '#EE3124');
+document.getElementById('bg').style.background =
+  `radial-gradient(ellipse 70% 45% at 50% 62%, ${R.cor}55, ${R.cor}14 55%, rgba(0,0,0,0) 75%), #0A0A0A`;
+
+/* Linhas de velocidade ao fundo (movimento continuo). */
+const streaks = [];
+for (let i = 0; i < 9; i++) {
+  const el = document.createElement('div');
+  el.className = 'streak';
+  const w = 160 + (i * 97) % 260;
+  el.style.width = w + 'px';
+  el.style.top = (120 + i * 205) + 'px';
+  document.getElementById('streaks').appendChild(el);
+  streaks.push({ el, w, speed: 60 + (i * 37) % 90, off: (i * 331) % 1400 });
+}
+
+/* Monta as cenas e calcula a linha do tempo. */
+let t0 = 0;
+const scenes = R.cenas.map(c => {
+  const el = document.createElement('div');
+  el.className = 'scene' + (c.tipo === 'final' ? ' final' : '');
+  const s = { c, el, start: t0, end: t0 + c.duracao, parts: {} };
+  t0 += c.duracao;
+  build(s);
+  document.getElementById('stage').appendChild(el);
+  return s;
+});
+const TOTAL = t0;
+
+function build(s) {
+  const c = s.c, el = s.el;
+  if (c.tipo === 'gancho') {
+    el.innerHTML = `<div class="title">${(c.linhas || []).map(l => `<div>${esc(l)}</div>`).join('')}
+      ${c.destaque ? `<div class="hl">${esc(c.destaque)}</div>` : ''}</div>`;
+  } else if (c.tipo === 'lista') {
+    const head = c.estilo === 'vermelho'
+      ? `<div class="head red">${esc(c.titulo)}</div>`
+      : `<div class="head">${c.ponto ? '<span class="dot"></span>' : ''}${esc(c.titulo)}</div>`;
+    el.innerHTML = head
+      + (c.subtitulo ? `<div class="sub">${esc(c.subtitulo)}</div>` : '')
+      + (c.etiqueta ? `<div class="pill">${esc(c.etiqueta)}</div>` : '')
+      + (c.busca !== undefined ? `<div class="search"><span class="typed"></span><span class="caret"></span></div>` : '')
+      + `<div class="items">${(c.itens || []).map(it => `
+          <div class="item">${it.barra ? `<div class="bar" style="background:${BARRA[it.barra] || it.barra}"></div>` : ''}
+            ${c.pino ? `<svg class="pin" viewBox="0 0 24 24" fill="${R.cor}"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>` : ''}
+            <div class="txt"><div class="name">${esc(it.nome)}</div>${it.info ? `<div class="meta">${esc(it.info)}</div>` : ''}</div>
+            <div class="badge">${(it.status || []).map(st => {
+              const [bg, fg] = BADGE[st.cor] || BADGE.cinza;
+              return `<span style="background:${bg};color:${fg}">${esc(st.texto)}</span>`;
+            }).join('')}</div>
+          </div>`).join('')}</div>`
+      + (c.nota ? `<div class="note">${esc(c.nota)}</div>` : '');
+  } else if (c.tipo === 'agenda') {
+    let bars = '';
+    for (let i = 0; i < 34; i++) bars += '<i></i>';
+    el.innerHTML = `<div class="head">${esc(c.titulo)}</div>
+      <div class="card"><div class="cal"><div class="day"><b>${esc(c.dia_semana || 'QUI')}</b><i>${esc(c.dia || '15')}</i></div>
+        <div><div style="font-size:42px;font-weight:700">${esc(c.evento || 'Reunião agendada')}</div>
+        <div style="font-size:28px;color:#9A9A9A">${esc(c.detalhe || 'Google Agenda')}</div></div></div>
+        <div class="sync">${esc(c.confirmacao || 'Sincronizada com seu calendário')}</div></div>
+      <div class="card"><div class="rec">● ${esc(c.gravacao || 'Gravação da chamada')}</div><div class="wave">${bars}</div></div>
+      ${c.nota ? `<div class="note">${esc(c.nota)}</div>` : ''}`;
+  } else if (c.tipo === 'final') {
+    el.innerHTML = `<img src="${R.logo}" alt="">
+      <div class="lines">${(c.linhas || []).map((l, i) => `<div class="fl" ${i === (c.linhas.length - 1) && c.ultima_destaque ? `style="color:${R.cor}"` : ''}>${esc(l)}</div>`).join('')}</div>
+      ${c.cta ? `<div class="cta">${esc(c.cta)}</div>` : ''}
+      ${c.assinatura ? `<div class="tag">${esc(c.assinatura)}</div>` : ''}`;
+  }
+}
+
+function sceneAlpha(s, t) {
+  const a = ease((t - s.start) / FADE);
+  const b = s.end >= TOTAL - 1e-6 ? 1 : ease((s.end - t) / FADE);
+  return Math.min(a, b);
+}
+
+function renderAt(t) {
+  for (const st of streaks) {
+    const x = ((st.off + t * st.speed * 6) % (1080 + st.w * 2)) - st.w;
+    st.el.style.transform = `translateX(${x}px)`;
+  }
+  document.getElementById('progress').style.width = (100 * clamp01(t / TOTAL)) + '%';
+
+  for (const s of scenes) {
+    const on = t >= s.start - 0.01 && t <= s.end + 0.01;
+    s.el.style.display = on ? 'flex' : 'none';
+    if (!on) continue;
+    const lt = t - s.start, c = s.c;
+    const alpha = sceneAlpha(s, t);
+    s.el.style.opacity = alpha;
+    s.el.style.transform = `translateY(${(1 - ease(lt / FADE)) * 40}px)`;
+
+    if (c.tipo === 'lista') {
+      let delay = 0.5;
+      const typed = s.el.querySelector('.typed');
+      if (typed) {
+        const full = c.busca || '';
+        const n = Math.floor(clamp01((lt - 0.4) / 1.4) * full.length);
+        typed.textContent = full.slice(0, n);
+        s.el.querySelector('.caret').style.opacity = (Math.floor(lt * 2) % 2 === 0 || n < full.length) ? 1 : 0;
+        delay = 2.0;
+      }
+      s.el.querySelectorAll('.item').forEach((item, i) => {
+        const p = ease((lt - delay - i * 0.35) / 0.4);
+        item.style.opacity = p;
+        item.style.transform = `translateY(${(1 - p) * 30}px)`;
+        const it = (c.itens || [])[i] || {};
+        const st = it.status || [];
+        let cur = 0;
+        st.forEach((x, k) => { if (lt >= (x.em ?? 0)) cur = k; });
+        item.querySelectorAll('.badge span').forEach((b, k) => { b.style.opacity = k === cur ? 1 : 0; });
+        if (it.apagar_em !== undefined) item.style.opacity = p * (lt >= it.apagar_em ? 0.45 : 1);
+      });
+      const note = s.el.querySelector('.note');
+      if (note) note.style.opacity = ease((lt - (c.nota_em ?? (c.duracao - 1.8))) / 0.4);
+    } else if (c.tipo === 'agenda') {
+      const cards = s.el.querySelectorAll('.card');
+      cards.forEach((cd, i) => { const p = ease((lt - 0.4 - i * 0.5) / 0.4); cd.style.opacity = p; cd.style.transform = `translateY(${(1 - p) * 30}px)`; });
+      const playing = lt > 1.4;
+      s.el.querySelectorAll('.wave i').forEach((b, i) => {
+        const h = 22 + 70 * Math.abs(Math.sin(i * 1.7 + lt * 7.0) * Math.cos(i * 0.6 + lt * 3.1));
+        b.style.height = h + 'px';
+        b.style.background = playing && i / 34 < (lt - 1.4) / (c.duracao - 1.8) ? R.cor : '#555';
+      });
+      const note = s.el.querySelector('.note');
+      if (note) note.style.opacity = ease((lt - 2.2) / 0.4);
+    } else if (c.tipo === 'gancho') {
+      s.el.querySelectorAll('.title > div').forEach((d, i) => {
+        const p = ease((lt - 0.2 - i * 0.35) / 0.4);
+        d.style.opacity = p; d.style.transform = `translateY(${(1 - p) * 30}px)`;
+      });
+    } else if (c.tipo === 'final') {
+      const img = s.el.querySelector('img');
+      const ps = ease(lt / 0.6);
+      img.style.transform = `scale(${0.85 + 0.15 * ps})`; img.style.opacity = ps;
+      s.el.querySelectorAll('.fl').forEach((d, i) => { const p = ease((lt - 0.6 - i * 0.45) / 0.35); d.style.opacity = p; });
+      const cta = s.el.querySelector('.cta'); if (cta) cta.style.opacity = ease((lt - 0.6 - (c.linhas || []).length * 0.45) / 0.35);
+      const tag = s.el.querySelector('.tag'); if (tag) tag.style.opacity = ease((lt - 1.0 - (c.linhas || []).length * 0.45) / 0.35);
+    }
+  }
+}
+window.renderAt = renderAt;
+window.TOTAL = TOTAL;
+renderAt(0);
+</script>
+</body>
+</html>

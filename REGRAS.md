@@ -3,11 +3,17 @@
 > Este é o arquivo que você (Lucas) edita para mudar o comportamento das postagens automáticas.
 > Pode editar direto no GitHub, pelo navegador ou celular (ícone de lápis). A próxima execução já segue a versão nova.
 
+## Agenda da semana
+
+| Dia | Assunto | Formato |
+| --- | --- | --- |
+| Segunda, terça e quarta | **LigFlow** | alterna **post único** e **carrossel** (6 telas) |
+| Quinta, sexta e sábado | **Calutec: sites e sistemas** | **post único** no modelo Calutec |
+| Domingo | **Vídeo** | o mesmo vídeo vai para o **Reels** e para os **stories** |
+
 ## Configuração
 
 - **Perfil:** Instagram @calutec.solucoes (marca Metricool 7780320, fuso America/Sao_Paulo)
-- **Frequência:** 1 post por dia, todos os dias
-- **Formato:** alternar — um dia **post único**, no outro **carrossel** (6 telas). Ver o último formato em `HISTORICO.md`.
 - **Horário:** o melhor horário do dia segundo o Metricool, entre 10h e 20h, com pelo menos 2h de antecedência.
 - **Modo de publicação:** `publicar`
   - `publicar` = agenda e o post sai sozinho no horário.
@@ -15,39 +21,71 @@
 
 ## Visual (não mudar sem combinar)
 
-- Seguir **exatamente** os modelos em `kit/modelos/`: `post-unico.html` e `carrossel/1.html` a `6.html`.
+### LigFlow (segunda a quarta)
+- Modelos: `kit/modelos/post-unico.html` e `kit/modelos/carrossel/1.html` a `6.html`.
 - Fundo preto `#000000`, vermelho `#EE3124`, laranja `#FF8A00`, amarelo `#FFCF22`, cinza `#B7B7B7`, cartões `#1D1D1D` com borda `#343434`.
-- Fonte Saira (títulos em itálico 900, caixa alta). Logo oficial `kit/logo-ligflow.png`.
-- Tamanho 1080×1350 (4:5). Sem emoji nas artes. Sem fotos de pessoas.
-- Pode trocar textos, número de itens e cores de destaque dentro da paleta; não trocar a estrutura.
+- Logo do LigFlow (`kit/logo-ligflow.png`).
 
-## O que pode ser dito sobre o LigFlow (fatos aprovados)
+### Calutec — sites e sistemas (quinta a sábado)
+- Modelo: `kit/modelos/calutec/post-unico.html` (topo laranja, painel no meio, lista de itens embaixo).
+- Laranja da logo `#FD5002`, branco `#FFFFFF`, preto `#1A1A1A`, apoio pêssego `#FFF6F0` / `#FFD3B8` / `#FFB27A`.
+- Logo da Calutec (`kit/logo-calutec.png`) no quadrado preto arredondado, com "CALUTEC / SOLUÇÕES" ao lado.
+- O painel do meio pode mostrar um sistema (dashboard) ou um site (janela de navegador), conforme o tema. Sem números inventados: só barras e rótulos.
 
+### Vídeo (domingo)
+- Gerador: `kit/video/` (cenas animadas no estilo do vídeo de referência de 31/10). 1080×1920, 30 fps, 20 a 35 segundos.
+- Tema `ligflow` (vermelho) ou `calutec` (laranja): alternar a cada domingo, começando por `calutec` em 08/11.
+- Sempre termina com a cena final: logo + 2 ou 3 frases curtas + "Chama no direct" + @calutec.solucoes.
+- **Música:** escolher uma faixa da biblioteca do Instagram pelo Metricool (instrumental, animada, sem letra em destaque) no Reel.
+  O story vai sem música.
+
+### Para todos
+- Fonte Saira (títulos em itálico 900, caixa alta). Tamanho dos posts 1080×1350 (4:5).
+- Sem emoji nas artes. Sem fotos de pessoas.
+- Pode trocar textos, número de itens e cores de destaque dentro da paleta do assunto; não trocar a estrutura.
+
+## O que pode ser dito
+
+### LigFlow (fatos aprovados)
 - Até **10 chamadas simultâneas**.
 - O consultor **só fala com quem atendeu**; quem não atende fica para trás.
 - Você **sobe sua lista de leads**; se ninguém atende, o sistema **parte sozinho para o próximo lote** de números.
 - **Radar de Leads:** busca empresas por segmento, cidade e bairro e monta a lista pronta para discar.
-- **Filtro de caixa postal / secretária eletrônica.**
+- **Identifica caixa postal / secretária eletrônica.**
 - **Gravação e transcrição** das ligações.
 - **Agendar retornos e reuniões** com Google Agenda.
 - **Relatórios** de chamadas, minutos e custos por consultor.
 - Lista de bloqueio (não ligar para quem pediu para não receber ligação).
 
+### Calutec — sites e sistemas (serviços aprovados)
+- **Sites** institucionais e responsivos (funcionam no celular).
+- **Landing pages** para campanhas e vendas.
+- **Sistemas sob medida** para gestão: estoque, vendas e caixa, pedidos e delivery, relatórios.
+- Sistemas para mais de uma empresa ou unidade no mesmo sistema.
+
 ## O que NÃO fazer
 
 - Não inventar números, porcentagens, clientes ou depoimentos.
+- Não citar nomes de clientes da Calutec sem estar escrito aqui.
 - Estimativas (ex.: "~1 min por tentativa no celular", "até 10x mais tentativas") só com a nota "estimativa" visível na arte.
-- Não citar preço, plano ou promoção sem estar escrito aqui.
+- Não citar preço, plano, prazo de entrega ou promoção sem estar escrito aqui.
 - Não falar mal de concorrentes pelo nome.
-- Não repetir o mesmo tema dos últimos 7 posts (ver `HISTORICO.md`).
+- Não repetir o mesmo tema dos últimos 7 posts do mesmo assunto (ver `HISTORICO.md`).
 
 ## Legenda
 
-- Português do Brasil, tom direto, de consultor para consultor.
-- Estrutura: gancho (1 linha) → como funciona / benefício (2 a 5 linhas) → CTA "Quer ver funcionando? Chama no direct 👇".
+- Português do Brasil, tom direto.
+  - LigFlow: de consultor para consultor.
+  - Calutec: de dono de negócio para dono de negócio.
+- Estrutura: gancho (1 linha) → como funciona / benefício (2 a 5 linhas) → CTA.
+  - CTA LigFlow: "Quer ver funcionando? Chama no direct 👇"
+  - CTA Calutec: "Quer um orçamento? Chama no direct 👇"
 - Pode usar emoji com moderação na legenda (máx. 4).
-- Hashtags no final, 5 a 8, sempre incluindo `#ligflow`. Base: `#prospecção #vendas #telemarketing #consultor #crm #ligflow`.
+- Hashtags no final, 5 a 8:
+  - LigFlow: base `#prospecção #vendas #telemarketing #consultor #crm #ligflow`
+  - Calutec: base `#desenvolvimentoweb #sites #sistemas #landingpage #empreendedorismo #calutec`
 
 ## Público
 
-Consultores e equipes que prospectam por telefone (consórcio, seguros, crédito, B2B), donos de escritório e supervisores de vendas.
+- LigFlow: consultores e equipes que prospectam por telefone (consórcio, seguros, crédito, B2B), donos de escritório e supervisores de vendas.
+- Calutec: donos de pequenas e médias empresas (comércio, distribuidoras, restaurantes, serviços) que precisam de site ou de um sistema de gestão.

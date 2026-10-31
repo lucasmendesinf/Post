@@ -1,10 +1,10 @@
 # Pauta de temas
 
-> Lista de temas para os posts. A rotina pega o primeiro tema **sem** `[x]` que combine com o formato do dia
-> e marca com `[x]` depois de agendar. Pode adicionar, remover ou reordenar à vontade.
-> Quando todos estiverem marcados, a rotina recomeça do topo com ângulos novos (sem repetir texto).
+> A rotina pega o primeiro tema **sem** `[x]` da seção do assunto do dia e marca com `[x]` depois de agendar.
+> Pode adicionar, remover ou reordenar à vontade. Quando todos de uma seção estiverem marcados,
+> a rotina recomeça do topo daquela seção com ângulos novos (sem repetir texto).
 
-## Temas
+## LigFlow (segunda a quarta)
 
 - [x] Celular x LigFlow: uma ligação por vez contra até 10 simultâneas (carrossel, 31/10)
 - [x] Pare de discar um por um (post único, 31/10)
@@ -22,3 +22,29 @@
 - [ ] Do Radar à venda: a jornada completa dentro do LigFlow
 - [ ] Escritório com equipe x consultor individual: o LigFlow serve para os dois
 - [ ] Tempo é venda: o que fazer com as horas que você economiza
+
+## Calutec — sites e sistemas (quinta a sábado)
+
+- [ ] Sua empresa ainda roda em planilha? (sistema de gestão)
+- [ ] Seu negócio merece um site que vende (site institucional)
+- [ ] Landing page: uma página, um objetivo, mais contatos
+- [ ] Site que funciona no celular: onde seu cliente está
+- [ ] Estoque sob controle: chega de contar na mão
+- [ ] Pedidos e delivery organizados num só lugar
+- [ ] Vendas e caixa: feche o dia sem surpresa
+- [ ] Relatórios do seu jeito: decisões com informação
+- [ ] Mais de uma unidade? Um sistema só para todas
+- [ ] Site x rede social: por que ter os dois
+- [ ] Sistema pronto x sistema sob medida: quando vale cada um
+- [ ] 5 sinais de que sua empresa precisa de um sistema
+- [ ] O que um bom site precisa ter (checklist)
+- [ ] Do papel ao sistema: como é o processo de desenvolvimento
+
+## Vídeo de domingo (Reels + stories)
+
+- [x] LigFlow: Radar, discador, retornos, agenda e gravação (vídeo de referência, 01/11)
+- [ ] Calutec: da planilha ao sistema (estoque, vendas, pedidos, relatórios)
+- [ ] LigFlow: 10 chamadas simultâneas na prática (discador com status mudando)
+- [ ] Calutec: como nasce um site (briefing → layout → no ar)
+- [ ] LigFlow: um dia de prospecção com o Radar de Leads
+- [ ] Calutec: pedidos e delivery num só lugar

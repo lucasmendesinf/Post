@@ -1,6 +1,8 @@
 # Post — conteúdo do Instagram @calutec.solucoes
 
-Imagens e regras dos posts automáticos do LigFlow (agendados pelo Claude via Metricool).
+Imagens, vídeos e regras dos posts automáticos do LigFlow e da Calutec (agendados pelo Claude via Metricool).
+
+Agenda: segunda a quarta LigFlow, quinta a sábado sites e sistemas da Calutec, domingo vídeo (Reels + stories).
 
 ## Onde mexer
 
@@ -15,8 +17,9 @@ Para editar pelo celular ou navegador: abra o arquivo no GitHub → ícone de l�
 
 ## Estrutura
 
-- `ligflow/AAAA-MM-DD-tema/` — imagens de cada post (públicas: o Metricool busca daqui).
-- `kit/` — logo, fonte Saira, modelos HTML e `render.py` (gera os PNG 1080×1350).
+- `ligflow/AAAA-MM-DD-tema/` e `calutec/AAAA-MM-DD-tema/` — imagens e vídeos de cada post (públicos: o Metricool busca daqui).
+- `kit/` — logos, fonte Saira, modelos HTML e `render.py` (gera os PNG 1080×1350).
+- `kit/video/` — gerador dos vídeos de domingo (`gerar_video.py` + roteiro JSON → MP4 1080×1920).
 - `ROTINA.md` — passo a passo técnico que a tarefa diária segue.
 
 > Este repositório é público: não coloque aqui nada sigiloso (senhas, dados de clientes, listas de leads).
