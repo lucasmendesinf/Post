@@ -1,0 +1,63 @@
+{
+  "tema": "calutec",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "duracao": 3,
+      "linhas": ["Sua empresa", "ainda roda em"],
+      "destaque": "planilha?"
+    },
+    {
+      "tipo": "comparativo",
+      "duracao": 6,
+      "titulo": "Planilha x Sistema",
+      "esquerda": {"titulo": "Planilha", "itens": ["Estoque na mão", "Pedido no papel", "Caixa no fim do dia"]},
+      "direita": {"titulo": "Sistema", "itens": ["Estoque em dia", "Pedidos organizados", "Vendas registradas"]},
+      "frase": "Seu negócio no controle.",
+      "frase_em": 4.0
+    },
+    {
+      "tipo": "lista",
+      "duracao": 5.5,
+      "ponto": true,
+      "titulo": "Estoque",
+      "itens": [
+        {"nome": "Produto A", "info": "entrada registrada", "barra": "verde", "status": [{"texto": "Em dia", "cor": "verde"}]},
+        {"nome": "Produto B", "info": "vendas da semana", "barra": "amarelo", "status": [{"texto": "Repor logo", "cor": "amarelo"}]},
+        {"nome": "Produto C", "info": "abaixo do mínimo", "barra": "vermelho", "status": [{"texto": "Comprar", "cor": "vermelho"}]}
+      ],
+      "nota": "Saiba o que comprar antes de faltar"
+    },
+    {
+      "tipo": "lista",
+      "duracao": 6.5,
+      "estilo": "vermelho",
+      "titulo": "Pedidos e delivery",
+      "itens": [
+        {"nome": "Pedido 101", "info": "balcão", "status": [{"texto": "Novo", "cor": "azul", "em": 0}, {"texto": "Preparando", "cor": "amarelo", "em": 2.4}, {"texto": "Entregue", "cor": "verde", "em": 4.4}]},
+        {"nome": "Pedido 102", "info": "delivery", "status": [{"texto": "Novo", "cor": "azul", "em": 0}, {"texto": "Preparando", "cor": "amarelo", "em": 3.0}, {"texto": "Saiu p/ entrega", "cor": "roxo", "em": 4.8}]},
+        {"nome": "Pedido 103", "info": "delivery", "status": [{"texto": "Novo", "cor": "azul", "em": 0}, {"texto": "Preparando", "cor": "amarelo", "em": 3.6}]}
+      ],
+      "nota": "Do pedido à entrega, num só lugar",
+      "nota_em": 5.0
+    },
+    {
+      "tipo": "lista",
+      "duracao": 4.5,
+      "titulo": "Relatórios",
+      "subtitulo": "do seu jeito",
+      "itens": [
+        {"nome": "Vendas do mês", "info": "por produto e por dia", "barra": "laranja", "status": [{"texto": "Pronto", "cor": "verde"}]},
+        {"nome": "Caixa", "info": "entradas e saídas", "barra": "laranja", "status": [{"texto": "Pronto", "cor": "verde"}]}
+      ]
+    },
+    {
+      "tipo": "final",
+      "duracao": 4,
+      "linhas": ["Sites e sistemas", "feitos para o", "seu negócio."],
+      "ultima_destaque": true,
+      "cta": "Peça um orçamento",
+      "assinatura": "@calutec.solucoes"
+    }
+  ]
+}
