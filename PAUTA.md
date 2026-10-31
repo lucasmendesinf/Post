@@ -43,6 +43,7 @@
 ## Vídeo de domingo (Reels + stories)
 
 - [x] LigFlow: Radar, discador, retornos, agenda e gravação (vídeo de referência, 01/11)
+- [x] LigFlow: prospecção automática, primeiro vídeo do gerador (08/11)
 - [ ] Calutec: da planilha ao sistema (estoque, vendas, pedidos, relatórios)
 - [ ] LigFlow: 10 chamadas simultâneas na prática (discador com status mudando)
 - [ ] Calutec: como nasce um site (briefing → layout → no ar)

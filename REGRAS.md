@@ -34,7 +34,7 @@
 
 ### Vídeo (domingo)
 - Gerador: `kit/video/` (cenas animadas no estilo do vídeo de referência de 31/10). 1080×1920, 30 fps, 20 a 35 segundos.
-- Tema `ligflow` (vermelho) ou `calutec` (laranja): alternar a cada domingo, começando por `calutec` em 08/11.
+- Tema `ligflow` (vermelho) ou `calutec` (laranja): alternar a cada domingo, começando por `calutec` em 15/11.
 - Sempre termina com a cena final: logo + 2 ou 3 frases curtas + "Chama no direct" + @calutec.solucoes.
 - **Música:** escolher uma faixa da biblioteca do Instagram pelo Metricool (instrumental, animada, sem letra em destaque) no Reel.
   O story vai sem música.
