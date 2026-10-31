@@ -37,7 +37,9 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
 
 ## 3b. Criar o vídeo (domingo)
 
-1. Pasta: `<ligflow|calutec>/AAAA-MM-DD-video-<tema>/`.
+1. Se o tema da pauta indicar **vídeo pronto** (arquivo em `videos-prontos/`), copiar esse MP4 para a pasta do dia
+   como `video.mp4`, conferir que tem áudio e pular direto para "4. Publicar". Não gerar outro.
+   Caso contrário, criar a pasta `<ligflow|calutec>/AAAA-MM-DD-video-<tema>/` e seguir os passos abaixo.
 2. Escrever `roteiro.json` a partir de `kit/video/exemplo-roteiro.json`:
    - `tema`: `ligflow` ou `calutec` (alternar a cada domingo, ver `HISTORICO.md`).
    - Cenas disponíveis: `gancho`, `lista` (com `busca` digitando, `status` que mudam com `em` em segundos,

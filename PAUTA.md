@@ -44,7 +44,7 @@
 
 - [x] LigFlow: Radar, discador, retornos, agenda e gravação (vídeo de referência, 01/11)
 - [ ] Calutec: da planilha ao sistema (estoque, vendas, pedidos, relatórios)
-- [ ] LigFlow: 10 chamadas simultâneas na prática (discador com status mudando)
+- [ ] LigFlow: 10 chamadas simultâneas na prática — **vídeo pronto**: `videos-prontos/ligflow-10-chamadas-simultaneas.mp4`
 - [ ] Calutec: como nasce um site (briefing → layout → no ar)
 - [ ] LigFlow: um dia de prospecção com o Radar de Leads
 - [ ] Calutec: pedidos e delivery num só lugar

@@ -20,6 +20,7 @@ Para editar pelo celular ou navegador: abra o arquivo no GitHub → ícone de l�
 - `ligflow/AAAA-MM-DD-tema/` e `calutec/AAAA-MM-DD-tema/` — imagens e vídeos de cada post (públicos: o Metricool busca daqui).
 - `kit/` — logos, fonte Saira, modelos HTML e `render.py` (gera os PNG 1080×1350).
 - `kit/video/` — gerador dos vídeos de domingo (`gerar_video.py` + roteiro JSON → MP4 1080×1920).
+- `videos-prontos/` — vídeos já aprovados, que a rotina usa no domingo do tema indicado na pauta.
 - `ROTINA.md` — passo a passo técnico que a tarefa diária segue.
 
 > Este repositório é público: não coloque aqui nada sigiloso (senhas, dados de clientes, listas de leads).
