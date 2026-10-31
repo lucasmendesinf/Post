@@ -41,7 +41,11 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
 2. Escrever `roteiro.json` a partir de `kit/video/exemplo-roteiro.json`:
    - `tema`: `ligflow` ou `calutec` (alternar a cada domingo, ver `HISTORICO.md`).
    - Cenas disponíveis: `gancho`, `lista` (com `busca` digitando, `status` que mudam com `em` em segundos,
-     `apagar_em`, `barra`, `pino`, `nota`), `agenda` (reunião + gravação) e `final` (logo + frases + CTA).
+     `apagar_em`, `barra`, `pino`, `nota`), `agenda` (reunião + gravação), `numero` (contador grande),
+     `grade` (10 linhas discando lado a lado, com destaque para quem atendeu), `comparativo` (duas colunas
+     com ✕ e ✓ e uma frase de efeito) e `final` (logo + frases + CTA).
+   - Exemplos completos: `kit/video/exemplo-roteiro.json` (estilo do vídeo de referência) e
+     `kit/video/exemplo-roteiro-2.json` (contador + grade + comparativo). Variar a combinação de cenas a cada vídeo.
    - Duração total entre 20 e 35 segundos. Começar com `gancho` e terminar com `final`.
    - Nomes nas listas sempre genéricos (ex.: "Lead 01", "Cliente Exemplo"), nunca clientes reais.
 3. Rodar `python3 kit/video/gerar_video.py <pasta>/roteiro.json <pasta>/video.mp4` (cerca de 1 minuto).

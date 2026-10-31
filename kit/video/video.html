@@ -45,6 +45,26 @@ body { font-family: Saira, Arial, Helvetica, sans-serif; color: #F7F7F7; }
 .final .tag { margin-top: 34px; font-size: 32px; color: #B7B7B7; font-weight: 500; }
 .logo-small { position: absolute; top: 90px; left: 50%; transform: translateX(-50%); width: 200px; height: 150px; object-fit: contain; opacity: .95; }
 #progress { position: absolute; left: 0; bottom: 0; height: 10px; background: var(--accent); }
+/* cena "numero": contador grande */
+.big { font-size: 380px; font-weight: 900; font-style: italic; line-height: 0.9; text-align: center; color: var(--accent); letter-spacing: -10px; }
+.big-cap { margin-top: 20px; font-size: 64px; font-weight: 800; text-align: center; text-transform: uppercase; line-height: 1.05; }
+/* cena "grade": linhas discando lado a lado */
+.grid { margin-top: 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cell { display: flex; align-items: center; justify-content: space-between; padding: 36px 26px; border-radius: 16px; background: #161616; border: 2px solid #2C2C2C; }
+.cell .lbl { font-size: 36px; font-weight: 600; color: #B7B7B7; }
+.cell .st { font-size: 32px; font-weight: 800; font-style: italic; text-transform: uppercase; }
+.winner { margin-top: 30px; display: flex; align-items: center; gap: 26px; padding: 30px 34px; border-radius: 20px; background: #161616; border: 4px solid #FACC15; }
+.winner .ico { width: 84px; height: 84px; border-radius: 999px; background: #FACC15; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.winner .wt { font-size: 40px; font-weight: 800; line-height: 1.15; }
+/* cena "comparativo": duas colunas */
+.cols { margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.col { padding: 34px 28px; border-radius: 22px; background: #161616; border: 2px solid #2C2C2C; display: flex; flex-direction: column; gap: 26px; }
+.col.win { background: var(--accent-soft); border-color: var(--accent); }
+.col h3 { margin: 0; font-size: 34px; letter-spacing: 3px; text-transform: uppercase; color: #9A9A9A; }
+.col.win h3 { color: var(--accent); }
+.col .ln { display: flex; gap: 16px; align-items: flex-start; font-size: 36px; font-weight: 700; line-height: 1.2; }
+.col .ln b { flex-shrink: 0; width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-top: 2px; }
+.punch { margin-top: 56px; text-align: center; font-size: 68px; font-weight: 900; font-style: italic; text-transform: uppercase; line-height: 1.05; }
 </style>
 </head>
 <body>
@@ -70,6 +90,7 @@ const clamp01 = x => Math.min(Math.max(x, 0), 1);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 document.documentElement.style.setProperty('--accent', R.cor || '#EE3124');
+document.documentElement.style.setProperty('--accent-soft', (R.cor || '#EE3124') + '2E');
 document.getElementById('bg').style.background =
   `radial-gradient(ellipse 70% 45% at 50% 62%, ${R.cor}55, ${R.cor}14 55%, rgba(0,0,0,0) 75%), #0A0A0A`;
 
@@ -131,6 +152,23 @@ function build(s) {
         <div class="sync">${esc(c.confirmacao || 'Sincronizada com seu calendário')}</div></div>
       <div class="card"><div class="rec">● ${esc(c.gravacao || 'Gravação da chamada')}</div><div class="wave">${bars}</div></div>
       ${c.nota ? `<div class="note">${esc(c.nota)}</div>` : ''}`;
+  } else if (c.tipo === 'numero') {
+    el.innerHTML = `${c.antes ? `<div class="head" style="margin-bottom:24px">${esc(c.antes)}</div>` : ''}
+      <div class="big"><span class="cnt">${esc(c.de ?? 1)}</span>${esc(c.sufixo || '')}</div>
+      <div class="big-cap">${esc(c.legenda || '')}</div>`;
+  } else if (c.tipo === 'grade') {
+    el.innerHTML = `<div class="head">${c.ponto ? '<span class="dot"></span>' : ''}${esc(c.titulo)}</div>
+      <div class="grid">${(c.itens || []).map(it => `<div class="cell"><span class="lbl">${esc(it.nome)}</span>
+        <span class="badge" style="min-width:230px;height:44px">${(it.status || []).map(st => {
+          const [, fg] = BADGE[st.cor] || BADGE.cinza;
+          return `<span class="st" style="background:none;padding:0;color:${fg}">${esc(st.texto)}</span>`;
+        }).join('')}</span></div>`).join('')}</div>
+      ${c.destaque ? `<div class="winner"><div class="ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><div class="wt">${esc(c.destaque)}</div></div>` : ''}`;
+  } else if (c.tipo === 'comparativo') {
+    const col = (cfg, win) => `<div class="col${win ? ' win' : ''}"><h3>${esc(cfg.titulo)}</h3>${(cfg.itens || []).map(x => `<div class="ln"><b style="background:${win ? R.cor : '#2C2C2C'};color:${win ? '#fff' : '#9A9A9A'}">${win ? '✓' : '✕'}</b><span>${esc(x)}</span></div>`).join('')}</div>`;
+    el.innerHTML = `<div class="head">${esc(c.titulo)}</div>
+      <div class="cols">${col(c.esquerda, false)}${col(c.direita, true)}</div>
+      ${c.frase ? `<div class="punch">${esc(c.frase)}</div>` : ''}`;
   } else if (c.tipo === 'final') {
     el.innerHTML = `<img src="${R.logo}" alt="">
       <div class="lines">${(c.linhas || []).map((l, i) => `<div class="fl" ${i === (c.linhas.length - 1) && c.ultima_destaque ? `style="color:${R.cor}"` : ''}>${esc(l)}</div>`).join('')}</div>
@@ -200,6 +238,38 @@ function renderAt(t) {
         const p = ease((lt - 0.2 - i * 0.35) / 0.4);
         d.style.opacity = p; d.style.transform = `translateY(${(1 - p) * 30}px)`;
       });
+    } else if (c.tipo === 'numero') {
+      const de = c.de ?? 1, ate = c.ate ?? 10;
+      const p = ease((lt - 0.3) / Math.max(c.contagem ?? 1.6, 0.1));
+      s.el.querySelector('.cnt').textContent = Math.round(de + (ate - de) * p);
+      const big = s.el.querySelector('.big');
+      big.style.transform = `scale(${0.9 + 0.1 * ease(lt / 0.5) + (p >= 1 ? 0.04 * Math.max(0, 1 - (lt - 0.3 - (c.contagem ?? 1.6)) / 0.3) : 0)})`;
+      s.el.querySelector('.big-cap').style.opacity = ease((lt - 0.3 - (c.contagem ?? 1.6)) / 0.4);
+    } else if (c.tipo === 'grade') {
+      s.el.querySelectorAll('.cell').forEach((cell, i) => {
+        const p = ease((lt - 0.4 - i * 0.12) / 0.35);
+        cell.style.opacity = p; cell.style.transform = `scale(${0.94 + 0.06 * p})`;
+        const st = ((c.itens || [])[i] || {}).status || [];
+        let cur = 0;
+        st.forEach((x, k) => { if (lt >= (x.em ?? 0)) cur = k; });
+        cell.querySelectorAll('.st').forEach((b, k) => { b.style.opacity = k === cur ? 1 : 0; });
+        const win = (st[cur] || {}).cor === 'verde';
+        cell.style.background = win ? '#FACC15' : '#161616';
+        cell.style.borderColor = win ? '#FACC15' : '#2C2C2C';
+        cell.querySelector('.lbl').style.color = win ? '#000' : '#B7B7B7';
+        if (win) cell.querySelector('.st:nth-child(' + (cur + 1) + ')').style.color = '#000';
+      });
+      const w = s.el.querySelector('.winner');
+      if (w) { const p = ease((lt - (c.destaque_em ?? 3.4)) / 0.45); w.style.opacity = p; w.style.transform = `translateY(${(1 - p) * 30}px)`; }
+    } else if (c.tipo === 'comparativo') {
+      s.el.querySelectorAll('.col').forEach((col, ci) => {
+        const p = ease((lt - 0.3 - ci * 0.5) / 0.4); col.style.opacity = p;
+        col.querySelectorAll('.ln').forEach((ln, i) => {
+          const q = ease((lt - 0.6 - ci * 1.2 - i * 0.35) / 0.35);
+          ln.style.opacity = q; ln.style.transform = `translateX(${(1 - q) * -24}px)`;
+        });
+      });
+      const pu = s.el.querySelector('.punch'); if (pu) pu.style.opacity = ease((lt - (c.frase_em ?? (c.duracao - 1.8))) / 0.4);
     } else if (c.tipo === 'final') {
       const img = s.el.querySelector('img');
       const ps = ease(lt / 0.6);
