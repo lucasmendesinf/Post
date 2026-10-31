@@ -7,8 +7,10 @@ O roteiro descreve as cenas (ver kit/video/exemplo-roteiro.json). A pagina
 kit/video/video.html anima as cenas em funcao do tempo; este script grava
 quadro a quadro com o Chrome (Playwright) e monta o MP4 com o ffmpeg.
 
-Sem --musica o video sai sem audio: a musica entra pelo Metricool, com uma
-faixa da biblioteca do Instagram (audioConfiguration no Reel).
+A musica padrao e kit/video/musica.m4a (faixa do video de referencia do Lucas),
+embutida no proprio arquivo para sair igual no Reels e nos stories. Se o video
+for mais longo que a faixa, ela repete; no fim entra um fade-out. Use
+--musica para outra faixa ou --sem-musica para gerar sem audio.
 """
 import argparse
 import json
@@ -42,7 +44,8 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("roteiro")
     ap.add_argument("saida")
-    ap.add_argument("--musica")
+    ap.add_argument("--musica", default=str(VIDEO_DIR / "musica.m4a"))
+    ap.add_argument("--sem-musica", action="store_true")
     args = ap.parse_args()
 
     roteiro = json.loads(Path(args.roteiro).read_text(encoding="utf-8"))
@@ -61,9 +64,12 @@ def main() -> None:
 
     saida = Path(args.saida)
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "image2pipe", "-vcodec", "mjpeg", "-framerate", str(FPS), "-i", "-"]
-    if args.musica:
-        cmd += ["-i", args.musica, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "160k", "-shortest",
-                "-af", f"afade=t=out:st={max(total - 1.5, 0)}:d=1.5"]
+    if not args.sem_musica:
+        if not Path(args.musica).exists():
+            sys.exit(f"Musica nao encontrada: {args.musica}")
+        cmd += ["-stream_loop", "-1", "-i", args.musica, "-map", "0:v", "-map", "1:a",
+                "-c:a", "aac", "-b:a", "160k", "-t", f"{total}",
+                "-af", f"afade=t=in:st=0:d=0.3,afade=t=out:st={max(total - 1.5, 0)}:d=1.5"]
     cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
             "-movflags", "+faststart", str(saida)]
 

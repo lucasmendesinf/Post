@@ -49,6 +49,8 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
    - Duração total entre 20 e 35 segundos. Começar com `gancho` e terminar com `final`.
    - Nomes nas listas sempre genéricos (ex.: "Lead 01", "Cliente Exemplo"), nunca clientes reais.
 3. Rodar `python3 kit/video/gerar_video.py <pasta>/roteiro.json <pasta>/video.mp4` (cerca de 1 minuto).
+   A música `kit/video/musica.m4a` entra automaticamente. Conferir com `ffprobe` que o vídeo tem trilha de áudio;
+   se não tiver, **não publicar** e avisar o Lucas.
 4. Extrair quadros para conferir (`ffmpeg -i video.mp4 -vf "fps=1/2.5,scale=270:480,tile=6x2" -frames:v 1 quadros.png`)
    e **olhar**: textos cortados, sobreposição, cena vazia. Corrigir o roteiro e gerar de novo se preciso.
    Não fazer commit de `quadros.png`.
@@ -61,11 +63,9 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
    - modo `publicar` em `REGRAS.md` → `autoPublish: true`, `draft: false`; modo `rascunho` → `draft: true`.
    - **post único / carrossel:** `instagramData.type` = `POST`, imagens na ordem `01.png` … `06.png`.
    - **domingo:** dois agendamentos no mesmo horário com o mesmo `video.mp4`:
-     1. `type` = `REEL`, com legenda, `showReelOnFeed: true` e `audioConfiguration` com uma música da biblioteca do
-        Instagram (passar um termo de busca em `audioId`; se vier lista de candidatas, escolher uma instrumental e
-        reenviar com o id numérico). Se o Metricool recusar a música (conta sem Facebook vinculado, por exemplo),
-        agendar sem música e avisar o Lucas.
-     2. `type` = `STORY`, **sem texto** e sem música.
+     1. `type` = `REEL`, com legenda e `showReelOnFeed: true`. **Não** usar `audioConfiguration`: a música já está
+        embutida no vídeo.
+     2. `type` = `STORY`, **sem texto**.
 4. Marcar o tema com `[x]` em `PAUTA.md` (com formato e data) e adicionar a linha em `HISTORICO.md`. Commit e push.
 
 ## 5. Avisar

@@ -36,8 +36,8 @@
 - Gerador: `kit/video/` (cenas animadas no estilo do vídeo de referência de 31/10). 1080×1920, 30 fps, 20 a 35 segundos.
 - Tema `ligflow` (vermelho) ou `calutec` (laranja): alternar a cada domingo, começando por `calutec` em 08/11.
 - Sempre termina com a cena final: logo + 2 ou 3 frases curtas + "Chama no direct" + @calutec.solucoes.
-- **Música:** escolher uma faixa da biblioteca do Instagram pelo Metricool (instrumental, animada, sem letra em destaque) no Reel.
-  O story vai sem música.
+- **Música:** a faixa do vídeo de referência (`kit/video/musica.m4a`) vai embutida em todo vídeo gerado,
+  então sai igual no Reels e nos stories. Nunca publicar vídeo sem áudio. Para trocar a música, substitua esse arquivo.
 
 ### Para todos
 - Fonte Saira (títulos em itálico 900, caixa alta). Tamanho dos posts 1080×1350 (4:5).
