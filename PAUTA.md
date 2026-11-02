@@ -8,7 +8,7 @@
 
 - [x] Celular x LigFlow: uma ligação por vez contra até 10 simultâneas (carrossel, 31/10)
 - [x] Pare de discar um por um (post único, 31/10)
-- [ ] Radar de Leads: sem lista? O LigFlow acha (segmento, cidade e bairro)
+- [x] Radar de Leads: sem lista? O LigFlow acha (segmento, cidade e bairro) (post único, 02/11)
 - [ ] Caixa postal: quanto tempo você perde ouvindo secretária eletrônica
 - [ ] O dia do consultor: discando e esperando x conversando e vendendo
 - [ ] Como funciona em 4 passos: sobe a lista → 10 chamadas → atendeu chega pra você → ninguém atendeu, próximo lote
