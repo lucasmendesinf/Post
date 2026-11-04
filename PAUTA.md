@@ -10,7 +10,7 @@
 - [x] Pare de discar um por um (post único, 31/10)
 - [x] Radar de Leads: sem lista? O LigFlow acha (segmento, cidade e bairro) (post único, 02/11)
 - [x] Caixa postal: quanto tempo você perde ouvindo secretária eletrônica (carrossel, 03/11)
-- [ ] O dia do consultor: discando e esperando x conversando e vendendo
+- [x] O dia do consultor: discando e esperando x conversando e vendendo (post único, 04/11)
 - [ ] Como funciona em 4 passos: sobe a lista → 10 chamadas → atendeu chega pra você → ninguém atendeu, próximo lote
 - [ ] Gravação e transcrição: reveja o que foi combinado em cada ligação
 - [ ] Retorno agendado: nunca mais esquecer um "me liga semana que vem" (Google Agenda)
