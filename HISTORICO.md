@@ -11,3 +11,4 @@
 | 03/11/2026 | 10h00 | LigFlow | carrossel | Caixa postal: quanto tempo você perde | `ligflow/2026-11-03-carrossel-caixa-postal` | agendado |
 | 04/11/2026 | 10h00 | LigFlow | post único | O dia do consultor: menos espera, mais conversa | `ligflow/2026-11-04-post-dia-do-consultor` | agendado |
 | 05/11/2026 | 10h00 | Calutec | post único | Sua empresa ainda roda em planilha? | `calutec/2026-11-05-post-empresa-em-planilha` | agendado |
+| 06/11/2026 | 10h00 | Calutec | post único | Seu negócio merece um site que vende | `calutec/2026-11-06-post-site-que-vende` | agendado |

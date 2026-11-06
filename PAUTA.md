@@ -26,7 +26,7 @@
 ## Calutec — sites e sistemas (quinta a sábado)
 
 - [x] Sua empresa ainda roda em planilha? (sistema de gestão) (post único, 05/11)
-- [ ] Seu negócio merece um site que vende (site institucional)
+- [x] Seu negócio merece um site que vende (site institucional) (post único, 06/11)
 - [ ] Landing page: uma página, um objetivo, mais contatos
 - [ ] Site que funciona no celular: onde seu cliente está
 - [ ] Estoque sob controle: chega de contar na mão
