@@ -13,3 +13,4 @@
 | 05/11/2026 | 10h00 | Calutec | post único | Sua empresa ainda roda em planilha? | `calutec/2026-11-05-post-empresa-em-planilha` | agendado |
 | 06/11/2026 | 10h00 | Calutec | post único | Seu negócio merece um site que vende | `calutec/2026-11-06-post-site-que-vende` | agendado |
 | 07/11/2026 | 10h00 | Calutec | post único | Landing page: uma página, um objetivo, mais contatos | `calutec/2026-11-07-post-landing-page` | agendado |
+| 08/11/2026 | 10h00 | Calutec | vídeo (Reels + stories) | Da planilha ao sistema | `calutec/2026-11-08-video-planilha-ao-sistema` | agendado |
