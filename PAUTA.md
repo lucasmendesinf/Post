@@ -12,7 +12,7 @@
 - [x] Caixa postal: quanto tempo você perde ouvindo secretária eletrônica (carrossel, 03/11)
 - [x] O dia do consultor: discando e esperando x conversando e vendendo (post único, 04/11)
 - [x] Como funciona em 4 passos: sobe a lista → 10 chamadas → atendeu chega pra você → ninguém atendeu, próximo lote (carrossel, 09/11)
-- [ ] Gravação e transcrição: reveja o que foi combinado em cada ligação
+- [x] Gravação e transcrição: reveja o que foi combinado em cada ligação (post único, 11/11)
 - [ ] Retorno agendado: nunca mais esquecer um "me liga semana que vem" (Google Agenda)
 - [ ] Para o supervisor: relatórios de chamadas, minutos e custos por consultor
 - [ ] Lista de bloqueio: prospectar sem ligar para quem pediu para não receber ligação
