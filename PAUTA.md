@@ -28,7 +28,7 @@
 - [x] Sua empresa ainda roda em planilha? (sistema de gestão) (post único, 05/11)
 - [x] Seu negócio merece um site que vende (site institucional) (post único, 06/11)
 - [x] Landing page: uma página, um objetivo, mais contatos (post único, 07/11)
-- [ ] Site que funciona no celular: onde seu cliente está
+- [x] Site que funciona no celular: onde seu cliente está (post único, 12/11)
 - [ ] Estoque sob controle: chega de contar na mão
 - [ ] Pedidos e delivery organizados num só lugar
 - [ ] Vendas e caixa: feche o dia sem surpresa

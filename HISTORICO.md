@@ -16,3 +16,4 @@
 | 08/11/2026 | 10h00 | Calutec | vídeo (Reels + stories) | vídeo | Da planilha ao sistema | `calutec/2026-11-08-video-planilha-ao-sistema` | agendado |
 | 09/11/2026 | 10h00 | LigFlow | carrossel | carrossel padrão | Como funciona em 4 passos | `ligflow/2026-11-09-carrossel-como-funciona-4-passos` | agendado |
 | 11/11/2026 | 10h00 | LigFlow | post único | painel | Gravação e transcrição: o cliente falou, ficou gravado | `ligflow/2026-11-11-post-gravacao-e-transcricao` | agendado |
+| 12/11/2026 | 10h00 | Calutec | post único | celular | Site que funciona no celular: seu cliente está no celular | `calutec/2026-11-12-post-site-no-celular` | agendado |
