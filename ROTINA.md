@@ -14,11 +14,14 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
 
 | Dia | Assunto | Formato | Modelo |
 | --- | --- | --- | --- |
-| Seg, Ter, Qua | LigFlow | oposto do último post único/carrossel de LigFlow no histórico | `kit/modelos/post-unico.html` ou `kit/modelos/carrossel/` |
-| Qui, Sex, Sáb | Calutec | post único | `kit/modelos/calutec/post-unico.html` |
+| Seg, Ter, Qua | LigFlow | oposto do último post único/carrossel de LigFlow no histórico | um modelo de `kit/modelos/ligflow/` ou `kit/modelos/ligflow/carrossel/` (ver variação) |
+| Qui, Sex, Sáb | Calutec | post único | um modelo de `kit/modelos/calutec/` (ver variação) |
 | Dom | Vídeo | Reel + Story (mesmo arquivo) | `kit/video/` |
 
 - **Tema:** o primeiro item sem `[x]` na seção do assunto em `PAUTA.md`, sem repetir os últimos 7 temas daquele assunto.
+- **Layout (variação obrigatória):** ler a coluna "Modelo" do `HISTORICO.md`. Não usar o layout do post anterior
+  do mesmo assunto nem nenhum dos últimos 3 daquele assunto. Preferir criar um layout novo (ver "Variação das artes"
+  em `REGRAS.md`); se criar, salvar em `kit/modelos/<assunto>/<nome>.html` com textos de exemplo.
 - **Horário:** `getBestTimeToPostByNetwork` (Metricool, instagram, marca 7780320, hoje) → maior valor entre 10h e 20h
   com pelo menos 2h de antecedência; se não houver, 19h.
 
@@ -26,11 +29,11 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
 
 1. Pasta: `ligflow/AAAA-MM-DD-<tema>/` para LigFlow, `calutec/AAAA-MM-DD-<tema>/` para Calutec.
 2. Copiar o(s) modelo(s) do dia:
-   - post único: o modelo → `01.html`
-   - carrossel: `kit/modelos/carrossel/1.html` … `6.html` → `01.html` … `06.html`
+   - post único: o modelo escolhido (ou o layout novo) → `01.html`
+   - carrossel: `kit/modelos/ligflow/carrossel/1.html` … `6.html` → `01.html` … `06.html`, variando a capa e as telas
      (tela 1 = capa com "Arraste para o lado"; tela 6 = recursos + CTA; telas 2–5 = conteúdo, numeradas "N / 6")
-3. Trocar **só os textos** (e, se preciso, a quantidade de itens repetindo o mesmo bloco), mantendo estrutura, cores,
-   tamanhos e os marcadores `{{LOGO}}` / `{{LOGO_CALUTEC}}`. No modelo Calutec, o painel do meio pode virar uma janela
+3. Trocar os textos mantendo cores, fonte e os marcadores `{{LOGO}}` / `{{LOGO_TRANSPARENTE}}` / `{{LOGO_CALUTEC}}` /
+   `{{LOGO_CALUTEC_TRANSPARENTE}}`. A estrutura pode mudar para variar o feed. No modelo Calutec, o painel do meio pode virar uma janela
    de navegador (temas de site) ou continuar como painel de sistema. Respeitar o que `REGRAS.md` permite dizer.
 4. Rodar `python3 kit/render.py <pasta>` e **olhar cada PNG** gerado: texto cortado, sobreposição,
    texto saindo da arte ou fonte errada → ajustar o HTML e renderizar de novo.
@@ -68,7 +71,7 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
      1. `type` = `REEL`, com legenda e `showReelOnFeed: true`. **Não** usar `audioConfiguration`: a música já está
         embutida no vídeo.
      2. `type` = `STORY`, **sem texto**.
-4. Marcar o tema com `[x]` em `PAUTA.md` (com formato e data) e adicionar a linha em `HISTORICO.md`. Commit e push.
+4. Marcar o tema com `[x]` em `PAUTA.md` (com formato e data) e adicionar a linha em `HISTORICO.md`, com o layout usado na coluna "Modelo". Commit e push.
 
 ## 5. Avisar
 

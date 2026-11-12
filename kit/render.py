@@ -5,7 +5,8 @@ Uso:
 
 Renderiza cada arquivo .html da pasta (em ordem alfabetica) para um .png
 de mesmo nome. Os HTML seguem os modelos de kit/modelos/ e usam os
-marcadores {{LOGO}} (LigFlow) e {{LOGO_CALUTEC}} no lugar do caminho
+marcadores {{LOGO}} / {{LOGO_TRANSPARENTE}} (LigFlow) e
+{{LOGO_CALUTEC}} / {{LOGO_CALUTEC_TRANSPARENTE}} no lugar do caminho
 das logos. A fonte Saira e injetada a partir de kit/fontes/, sem
 depender do Google Fonts.
 
@@ -19,6 +20,8 @@ from playwright.sync_api import sync_playwright
 KIT = Path(__file__).resolve().parent
 LOGO = KIT / "logo-ligflow.png"
 LOGO_CALUTEC = KIT / "logo-calutec.png"
+LOGO_TRANSP = KIT / "logo-ligflow-transparente.png"
+LOGO_CALUTEC_TRANSP = KIT / "logo-calutec-transparente.png"
 FONTES = KIT / "fontes"
 CHROME_CANDIDATOS = ["/usr/bin/google-chrome", "/usr/bin/chromium", "/usr/bin/chromium-browser"]
 
@@ -48,10 +51,15 @@ def main() -> None:
         page = browser.new_page(viewport={"width": 1080, "height": 1350})
         for html in paginas:
             fonte = html.read_text(encoding="utf-8")
-            if "{{" in fonte.replace("{{LOGO}}", "").replace("{{LOGO_CALUTEC}}", ""):
+            marcadores = {"{{LOGO_CALUTEC_TRANSPARENTE}}": LOGO_CALUTEC_TRANSP, "{{LOGO_TRANSPARENTE}}": LOGO_TRANSP,
+                          "{{LOGO_CALUTEC}}": LOGO_CALUTEC, "{{LOGO}}": LOGO}
+            resto = fonte
+            for m in marcadores:
+                resto = resto.replace(m, "")
+            if "{{" in resto:
                 sys.exit(f"{html.name}: ainda tem marcador {{{{...}}}} sem preencher")
-            fonte = fonte.replace("{{LOGO_CALUTEC}}", f"file://{LOGO_CALUTEC}")
-            fonte = fonte.replace("{{LOGO}}", f"file://{LOGO}")
+            for m, arq in marcadores.items():
+                fonte = fonte.replace(m, f"file://{arq}")
             fonte = fonte.replace("</head>", f"<style>{css}</style></head>", 1)
             tmp = html.with_suffix(".render.tmp.html")
             tmp.write_text(fonte, encoding="utf-8")

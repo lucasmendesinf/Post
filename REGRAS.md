@@ -22,15 +22,15 @@
 ## Visual (não mudar sem combinar)
 
 ### LigFlow (segunda a quarta)
-- Modelos: `kit/modelos/post-unico.html` e `kit/modelos/carrossel/1.html` a `6.html`.
+- Modelos de post único em `kit/modelos/ligflow/` (`painel`, `celular`, `manchete`, `notificacoes`) e carrossel em `kit/modelos/ligflow/carrossel/1.html` a `6.html`.
 - Fundo preto `#000000`, vermelho `#EE3124`, laranja `#FF8A00`, amarelo `#FFCF22`, cinza `#B7B7B7`, cartões `#1D1D1D` com borda `#343434`.
 - Logo do LigFlow (`kit/logo-ligflow.png`).
 
 ### Calutec — sites e sistemas (quinta a sábado)
-- Modelo: `kit/modelos/calutec/post-unico.html` (topo laranja, painel no meio, lista de itens embaixo).
+- Modelos em `kit/modelos/calutec/`: `painel` (topo laranja, painel no meio, lista embaixo), `celular` (fundo laranja com celular mostrando um site) e `escuro` (fundo preto #1A1A1A com lista numerada).
 - Laranja da logo `#FD5002`, branco `#FFFFFF`, preto `#1A1A1A`, apoio pêssego `#FFF6F0` / `#FFD3B8` / `#FFB27A`.
 - Logo da Calutec (`kit/logo-calutec.png`) no quadrado preto arredondado, com "CALUTEC / SOLUÇÕES" ao lado.
-- O painel do meio pode mostrar um sistema (dashboard) ou um site (janela de navegador), conforme o tema. Sem números inventados: só barras e rótulos.
+- No modelo `painel`, o painel do meio pode mostrar um sistema (dashboard) ou um site (janela de navegador), conforme o tema. Sem números inventados: só barras e rótulos.
 
 ### Vídeo (domingo)
 - Gerador: `kit/video/` (cenas animadas no estilo do vídeo de referência de 31/10). 1080×1920, 30 fps, 20 a 35 segundos.
@@ -42,7 +42,17 @@
 ### Para todos
 - Fonte Saira (títulos em itálico 900, caixa alta). Tamanho dos posts 1080×1350 (4:5).
 - Sem emoji nas artes. Sem fotos de pessoas.
-- Pode trocar textos, número de itens e cores de destaque dentro da paleta do assunto; não trocar a estrutura.
+- Pode trocar textos, número de itens e cores de destaque dentro da paleta do assunto.
+
+## Variação das artes (obrigatório)
+
+O feed não pode parecer a mesma imagem repetida.
+
+- **Nunca** usar o mesmo modelo/layout do post anterior do mesmo assunto, nem repetir um layout usado nos **últimos 3 posts** daquele assunto (ver coluna "Modelo" do `HISTORICO.md`).
+- Sempre que possível, **criar um layout novo** (composição diferente: posição do título, ilustração, fundo, disposição dos elementos), mantendo a paleta, a fonte Saira e a logo do assunto. Layout novo que ficar bom é salvo em `kit/modelos/<ligflow|calutec>/<nome>.html` para entrar no rodízio.
+- Ideias de composição para variar: celular/tela do sistema, manchete tipográfica com faixa diagonal, notificações empilhadas, lista numerada grande, comparativo lado a lado, pergunta gigante centralizada, número/ícone gigante, janela de navegador, fundo invertido (claro/escuro dentro da paleta).
+- **Carrossel:** a capa também varia (não repetir a capa centralizada com logo + selo + título); as telas de dentro podem usar layouts diferentes entre si.
+- Olhar também os 3 posts anteriores do **outro** assunto: o post do dia não pode parecer igual ao que está do lado no feed.
 
 ## O que pode ser dito
 
