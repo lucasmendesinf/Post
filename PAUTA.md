@@ -29,7 +29,7 @@
 - [x] Seu negócio merece um site que vende (site institucional) (post único, 06/11)
 - [x] Landing page: uma página, um objetivo, mais contatos (post único, 07/11)
 - [x] Site que funciona no celular: onde seu cliente está (post único, 12/11)
-- [ ] Estoque sob controle: chega de contar na mão
+- [x] Estoque sob controle: chega de contar na mão (post único, 13/11)
 - [ ] Pedidos e delivery organizados num só lugar
 - [ ] Vendas e caixa: feche o dia sem surpresa
 - [ ] Relatórios do seu jeito: decisões com informação
