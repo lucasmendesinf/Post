@@ -30,7 +30,7 @@
 - [x] Landing page: uma página, um objetivo, mais contatos (post único, 07/11)
 - [x] Site que funciona no celular: onde seu cliente está (post único, 12/11)
 - [x] Estoque sob controle: chega de contar na mão (post único, 13/11)
-- [ ] Pedidos e delivery organizados num só lugar
+- [x] Pedidos e delivery organizados num só lugar (post único, 14/11)
 - [ ] Vendas e caixa: feche o dia sem surpresa
 - [ ] Relatórios do seu jeito: decisões com informação
 - [ ] Mais de uma unidade? Um sistema só para todas
