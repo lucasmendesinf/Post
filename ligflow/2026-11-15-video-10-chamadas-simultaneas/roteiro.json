@@ -1,0 +1,57 @@
+{
+  "tema": "ligflow",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "duracao": 3,
+      "linhas": ["Quantas ligações", "você faz"],
+      "destaque": "ao mesmo tempo?"
+    },
+    {
+      "tipo": "numero",
+      "duracao": 3.5,
+      "antes": "No LigFlow, até",
+      "de": 1,
+      "ate": 10,
+      "contagem": 1.6,
+      "legenda": "chamadas simultâneas"
+    },
+    {
+      "tipo": "grade",
+      "duracao": 6.5,
+      "ponto": true,
+      "titulo": "Discando agora",
+      "itens": [
+        {"nome": "Linha 1", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Não atende", "cor": "cinza", "em": 2.2}]},
+        {"nome": "Linha 2", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Caixa postal", "cor": "cinza", "em": 1.8}]},
+        {"nome": "Linha 3", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Ocupado", "cor": "cinza", "em": 2.5}]},
+        {"nome": "Linha 4", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}]},
+        {"nome": "Linha 5", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Atendeu", "cor": "verde", "em": 2.9}]},
+        {"nome": "Linha 6", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Caixa postal", "cor": "cinza", "em": 2.0}]},
+        {"nome": "Linha 7", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}]},
+        {"nome": "Linha 8", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Não atende", "cor": "cinza", "em": 2.6}]},
+        {"nome": "Linha 9", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Ocupado", "cor": "cinza", "em": 1.6}]},
+        {"nome": "Linha 10", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}]}
+      ],
+      "destaque": "Só chega até você quem atendeu",
+      "destaque_em": 3.5
+    },
+    {
+      "tipo": "comparativo",
+      "duracao": 6.5,
+      "titulo": "Celular x LigFlow",
+      "esquerda": {"titulo": "Celular", "itens": ["Disca um por um", "Espera chamar", "Cai na caixa postal"]},
+      "direita": {"titulo": "LigFlow", "itens": ["Até 10 ao mesmo tempo", "Só quem atendeu", "Próximo lote sozinho"]},
+      "frase": "Menos discagem. Mais conversa.",
+      "frase_em": 4.4
+    },
+    {
+      "tipo": "final",
+      "duracao": 4,
+      "linhas": ["Pare de discar.", "Comece a conversar."],
+      "ultima_destaque": true,
+      "cta": "Chama no direct",
+      "assinatura": "@calutec.solucoes"
+    }
+  ]
+}
