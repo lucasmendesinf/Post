@@ -19,3 +19,4 @@
 | 12/11/2026 | 10h00 | Calutec | post único | celular | Site que funciona no celular: seu cliente está no celular | `calutec/2026-11-12-post-site-no-celular` | agendado |
 | 13/11/2026 | 10h00 | Calutec | post único | comparativo (novo) | Estoque sob controle: chega de contar estoque na mão | `calutec/2026-11-13-post-estoque-sob-controle` | agendado |
 | 14/11/2026 | 10h00 | Calutec | post único | quadro (novo) | Pedidos e delivery: todo pedido num só lugar | `calutec/2026-11-14-post-pedidos-e-delivery` | agendado |
+| 15/11/2026 | 10h00 | LigFlow | vídeo (Reels + stories) | vídeo (gancho + número + grade + comparativo) | 10 chamadas simultâneas na prática | `ligflow/2026-11-15-video-10-chamadas-simultaneas` | agendado |
