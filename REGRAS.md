@@ -1,4 +1,4 @@
-# Regras de postagem — Instagram @calutec.solucoes
+# Regras de postagem — Instagram @lig.flow
 
 > Este é o arquivo que você (Lucas) edita para mudar o comportamento das postagens automáticas.
 > Pode editar direto no GitHub, pelo navegador ou celular (ícone de lápis). A próxima execução já segue a versão nova.
@@ -7,13 +7,15 @@
 
 | Dia | Assunto | Formato |
 | --- | --- | --- |
-| Segunda, terça e quarta | **LigFlow** | alterna **post único** e **carrossel** (6 telas) |
-| Quinta, sexta e sábado | **Calutec: sites e sistemas** | **post único** no modelo Calutec |
-| Domingo | **Vídeo** | o mesmo vídeo vai para o **Reels** e para os **stories** |
+| Segunda a sábado | **LigFlow** | alterna **post único** e **carrossel** (6 telas) |
+| Domingo | **Vídeo LigFlow** | o mesmo vídeo vai para o **Reels** e para os **stories** |
+
+> Desde 17/11/2026 a marca do Metricool publica no Instagram **@lig.flow**. Os posts da Calutec estão **pausados**
+> (as regras e modelos da Calutec continuam aqui para quando voltarem a ter um perfil próprio).
 
 ## Configuração
 
-- **Perfil:** Instagram @calutec.solucoes (marca Metricool 7780320, fuso America/Sao_Paulo)
+- **Perfil:** Instagram @lig.flow (marca Metricool 7780320, fuso America/Sao_Paulo)
 - **Horário:** o melhor horário do dia segundo o Metricool, entre 10h e 20h, com pelo menos 2h de antecedência.
 - **Modo de publicação:** `publicar`
   - `publicar` = agenda e o post sai sozinho no horário.
@@ -21,7 +23,8 @@
 
 ## Visual (não mudar sem combinar)
 
-### LigFlow (segunda a quarta)
+### LigFlow (segunda a sábado)
+- Assinatura nas artes e vídeos: **@lig.flow**.
 - Modelos de post único em `kit/modelos/ligflow/` (`painel`, `celular`, `manchete`, `notificacoes`) e carrossel em `kit/modelos/ligflow/carrossel/1.html` a `6.html`.
 - Fundo preto `#000000`, vermelho `#EE3124`, laranja `#FF8A00`, amarelo `#FFCF22`, cinza `#B7B7B7`, cartões `#1D1D1D` com borda `#343434`.
 - Logo do LigFlow (`kit/logo-ligflow.png`).
@@ -34,8 +37,8 @@
 
 ### Vídeo (domingo)
 - Gerador: `kit/video/` (cenas animadas no estilo do vídeo de referência de 31/10). 1080×1920, 30 fps, 20 a 35 segundos.
-- Tema `ligflow` (vermelho) ou `calutec` (laranja): alternar a cada domingo, começando por `calutec` em 08/11.
-- Sempre termina com a cena final: logo + 2 ou 3 frases curtas + "Chama no direct" + @calutec.solucoes.
+- Tema `ligflow` (vermelho) enquanto a Calutec estiver pausada.
+- Sempre termina com a cena final: logo + 2 ou 3 frases curtas + "Chama no direct" + @lig.flow.
 - **Música:** a faixa do vídeo de referência (`kit/video/musica.m4a`) vai embutida em todo vídeo gerado,
   então sai igual no Reels e nos stories. Nunca publicar vídeo sem áudio. Para trocar a música, substitua esse arquivo.
 

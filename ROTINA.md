@@ -14,8 +14,7 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
 
 | Dia | Assunto | Formato | Modelo |
 | --- | --- | --- | --- |
-| Seg, Ter, Qua | LigFlow | oposto do último post único/carrossel de LigFlow no histórico | um modelo de `kit/modelos/ligflow/` ou `kit/modelos/ligflow/carrossel/` (ver variação) |
-| Qui, Sex, Sáb | Calutec | post único | um modelo de `kit/modelos/calutec/` (ver variação) |
+| Seg a Sáb | LigFlow | oposto do último post único/carrossel de LigFlow no histórico | um modelo de `kit/modelos/ligflow/` ou `kit/modelos/ligflow/carrossel/` (ver variação) |
 | Dom | Vídeo | Reel + Story (mesmo arquivo) | `kit/video/` |
 
 - **Tema:** o primeiro item sem `[x]` na seção do assunto em `PAUTA.md`, sem repetir os últimos 7 temas daquele assunto.
@@ -44,7 +43,7 @@ as regras e a pauta mandam; este arquivo só descreve o passo a passo técnico.
    como `video.mp4`, conferir que tem áudio e pular direto para "4. Publicar". Não gerar outro.
    Caso contrário, criar a pasta `<ligflow|calutec>/AAAA-MM-DD-video-<tema>/` e seguir os passos abaixo.
 2. Escrever `roteiro.json` a partir de `kit/video/exemplo-roteiro.json`:
-   - `tema`: `ligflow` ou `calutec` (alternar a cada domingo, ver `HISTORICO.md`).
+   - `tema`: `ligflow` (Calutec pausada, ver `REGRAS.md`).
    - Cenas disponíveis: `gancho`, `lista` (com `busca` digitando, `status` que mudam com `em` em segundos,
      `apagar_em`, `barra`, `pino`, `nota`), `agenda` (reunião + gravação), `numero` (contador grande),
      `grade` (10 linhas discando lado a lado, com destaque para quem atendeu), `comparativo` (duas colunas
