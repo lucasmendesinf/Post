@@ -22,3 +22,21 @@
 | 15/11/2026 | 10h00 | LigFlow | vídeo (Reels + stories) | vídeo (gancho + número + grade + comparativo) | 10 chamadas simultâneas na prática | `ligflow/2026-11-15-video-10-chamadas-simultaneas` | agendado |
 | 16/11/2026 | 10h00 | LigFlow | carrossel | carrossel novo (capa citação + bilhetes + tela de agendamento + agenda da semana + linha do tempo + fechamento com pílulas) | Retorno agendado: "me liga semana que vem" no Google Agenda | `ligflow/2026-11-16-carrossel-retorno-agendado` | agendado |
 | 17/11/2026 | 10h00 | LigFlow | post único | relatório (novo) | Para o supervisor: sua equipe no relatório (chamadas, minutos e custos por consultor) | `ligflow/2026-11-17-post-relatorios-supervisor` | agendado |
+
+## Conta @lig.flow (a partir de 17/11/2026)
+
+> Leva de relançamento dos posts LigFlow na conta nova. Artes repetidas foram refeitas com layouts novos e a assinatura passou a ser @lig.flow.
+
+| Data | Horário | Assunto | Formato | Modelo | Tema | Pasta | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 17/11/2026 | 16h00 | LigFlow | post único | painel | Pare de discar um por um | `ligflow/conta-lig-flow/01-post-pare-de-discar` | agendado |
+| 17/11/2026 | 17h00 | LigFlow | carrossel | carrossel padrão | Celular x LigFlow | `ligflow/conta-lig-flow/05-carrossel-celular-x-ligflow` | agendado |
+| 17/11/2026 | 18h00 | LigFlow | vídeo (Reels + stories) | vídeo de referência | Radar, discador, retornos, agenda e gravação | `ligflow/conta-lig-flow/06-video-ligflow-prospeccao` | agendado |
+| 17/11/2026 | 19h00 | LigFlow | post único | radar-celular (novo) | Radar de Leads: sem lista? O LigFlow acha | `ligflow/conta-lig-flow/02-post-radar-de-leads` | agendado |
+| 17/11/2026 | 20h00 | LigFlow | carrossel | carrossel novo (capa vermelha BIP + bolhas de voz + filtro + antes/depois + anel de 10 + fechamento) | Caixa postal | `ligflow/conta-lig-flow/07-carrossel-caixa-postal` | agendado |
+| 18/11/2026 | 10h00 | LigFlow | post único | dividido (novo) | Menos espera. Mais conversa. | `ligflow/conta-lig-flow/03-post-dia-do-consultor` | agendado |
+| 18/11/2026 | 11h00 | LigFlow | carrossel | carrossel novo (capa trilho + passo gigante + ciclo) | Como funciona em 4 passos | `ligflow/conta-lig-flow/08-carrossel-4-passos` | agendado |
+| 18/11/2026 | 12h00 | LigFlow | post único | transcricao (novo) | O cliente falou. Ficou gravado. | `ligflow/conta-lig-flow/04-post-gravacao-e-transcricao` | agendado |
+| 18/11/2026 | 16h00 | LigFlow | vídeo (Reels + stories) | vídeo (gancho + número + grade + comparativo) | 10 chamadas simultâneas na prática | `ligflow/conta-lig-flow/09-video-10-chamadas-simultaneas` | agendado |
+| 18/11/2026 | 17h00 | LigFlow | carrossel | carrossel novo (capa citação + bilhetes + agenda) | Retorno agendado no Google Agenda | `ligflow/conta-lig-flow/10-carrossel-retorno-agendado` | agendado |
+| 18/11/2026 | 18h00 | LigFlow | post único | relatório | Para o supervisor: sua equipe no relatório | `ligflow/conta-lig-flow/11-post-relatorios-supervisor` | agendado |
