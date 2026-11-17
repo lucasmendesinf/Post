@@ -14,7 +14,7 @@
 - [x] Como funciona em 4 passos: sobe a lista → 10 chamadas → atendeu chega pra você → ninguém atendeu, próximo lote (carrossel, 09/11)
 - [x] Gravação e transcrição: reveja o que foi combinado em cada ligação (post único, 11/11)
 - [x] Retorno agendado: nunca mais esquecer um "me liga semana que vem" (Google Agenda) (carrossel, 16/11)
-- [ ] Para o supervisor: relatórios de chamadas, minutos e custos por consultor
+- [x] Para o supervisor: relatórios de chamadas, minutos e custos por consultor (post único, 17/11)
 - [ ] Lista de bloqueio: prospectar sem ligar para quem pediu para não receber ligação
 - [ ] Mitos da prospecção por telefone ("ninguém mais atende", "ligação fria não funciona")
 - [ ] Dicas de abordagem nos primeiros 10 segundos da ligação

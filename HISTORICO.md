@@ -21,3 +21,4 @@
 | 14/11/2026 | 10h00 | Calutec | post único | quadro (novo) | Pedidos e delivery: todo pedido num só lugar | `calutec/2026-11-14-post-pedidos-e-delivery` | agendado |
 | 15/11/2026 | 10h00 | LigFlow | vídeo (Reels + stories) | vídeo (gancho + número + grade + comparativo) | 10 chamadas simultâneas na prática | `ligflow/2026-11-15-video-10-chamadas-simultaneas` | agendado |
 | 16/11/2026 | 10h00 | LigFlow | carrossel | carrossel novo (capa citação + bilhetes + tela de agendamento + agenda da semana + linha do tempo + fechamento com pílulas) | Retorno agendado: "me liga semana que vem" no Google Agenda | `ligflow/2026-11-16-carrossel-retorno-agendado` | agendado |
+| 17/11/2026 | 10h00 | LigFlow | post único | relatório (novo) | Para o supervisor: sua equipe no relatório (chamadas, minutos e custos por consultor) | `ligflow/2026-11-17-post-relatorios-supervisor` | agendado |
