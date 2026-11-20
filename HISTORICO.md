@@ -41,3 +41,4 @@
 | 18/11/2026 | 17h00 | LigFlow | carrossel | carrossel novo (capa citação + bilhetes + agenda) | Retorno agendado no Google Agenda | `ligflow/conta-lig-flow/10-carrossel-retorno-agendado` | agendado |
 | 18/11/2026 | 18h00 | LigFlow | post único | relatório | Para o supervisor: sua equipe no relatório | `ligflow/conta-lig-flow/11-post-relatorios-supervisor` | agendado |
 | 19/11/2026 | 10h00 | LigFlow | carrossel | carrossel novo de humor (cartazes "Procura-se" + caso encerrado) | Os leads mais procurados (humor: fantasma, gravação, semana que vem) | `ligflow/conta-lig-flow/extra-carrossel-humor-procurados` | agendado |
+| 20/11/2026 | 10h00 | LigFlow | post único | filtro (novo: lista com leads bloqueados + cartão vermelho) | Lista de bloqueio: pediu pra não ligar? Ninguém liga. | `ligflow/2026-11-20-post-lista-de-bloqueio` | agendado |

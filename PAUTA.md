@@ -15,7 +15,7 @@
 - [x] Gravação e transcrição: reveja o que foi combinado em cada ligação (post único, 11/11)
 - [x] Retorno agendado: nunca mais esquecer um "me liga semana que vem" (Google Agenda) (carrossel, 16/11)
 - [x] Para o supervisor: relatórios de chamadas, minutos e custos por consultor (post único, 17/11)
-- [ ] Lista de bloqueio: prospectar sem ligar para quem pediu para não receber ligação
+- [x] Lista de bloqueio: prospectar sem ligar para quem pediu para não receber ligação (post único, 20/11)
 - [ ] Mitos da prospecção por telefone ("ninguém mais atende", "ligação fria não funciona")
 - [ ] Dicas de abordagem nos primeiros 10 segundos da ligação
 - [ ] Checklist do consultor antes de começar o dia de ligações
