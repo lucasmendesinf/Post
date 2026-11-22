@@ -1,0 +1,82 @@
+{
+  "tema": "ligflow",
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "duracao": 3,
+      "linhas": ["Começou o dia", "sem lista de leads?"],
+      "destaque": "O Radar monta."
+    },
+    {
+      "tipo": "lista",
+      "duracao": 7,
+      "estilo": "vermelho",
+      "titulo": "Radar de Leads",
+      "etiqueta": "Segmento · cidade · bairro",
+      "busca": "Contabilidade · Campinas · Centro",
+      "pino": true,
+      "itens": [
+        {"nome": "Escritório Exemplo 1", "info": "Telefone encontrado", "status": [{"texto": "Na lista", "cor": "verde"}]},
+        {"nome": "Escritório Exemplo 2", "info": "Telefone encontrado", "status": [{"texto": "Na lista", "cor": "verde"}]},
+        {"nome": "Escritório Exemplo 3", "info": "Telefone encontrado", "status": [{"texto": "Na lista", "cor": "verde"}]},
+        {"nome": "Escritório Exemplo 4", "info": "Telefone encontrado", "status": [{"texto": "Na lista", "cor": "verde"}]}
+      ],
+      "nota": "Lista pronta para discar",
+      "nota_em": 5.0
+    },
+    {
+      "tipo": "grade",
+      "duracao": 6.5,
+      "ponto": true,
+      "titulo": "Discando a lista",
+      "itens": [
+        {"nome": "Linha 1", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Caixa postal", "cor": "cinza", "em": 2.0}]},
+        {"nome": "Linha 2", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Não atende", "cor": "cinza", "em": 2.4}]},
+        {"nome": "Linha 3", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Atendeu", "cor": "verde", "em": 2.8}]},
+        {"nome": "Linha 4", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Ocupado", "cor": "cinza", "em": 1.7}]},
+        {"nome": "Linha 5", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}]},
+        {"nome": "Linha 6", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Caixa postal", "cor": "cinza", "em": 2.2}]},
+        {"nome": "Linha 7", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}]},
+        {"nome": "Linha 8", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Não atende", "cor": "cinza", "em": 2.6}]},
+        {"nome": "Linha 9", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}]},
+        {"nome": "Linha 10", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Ocupado", "cor": "cinza", "em": 1.9}]}
+      ],
+      "destaque": "Atendeu? Chega pra você",
+      "destaque_em": 3.5
+    },
+    {
+      "tipo": "lista",
+      "duracao": 6,
+      "ponto": true,
+      "titulo": "Ninguém atendeu?",
+      "subtitulo": "o LigFlow segue sozinho",
+      "itens": [
+        {"nome": "Lead 07", "info": "Linha 7", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Caixa postal", "cor": "cinza", "em": 2.4}], "apagar_em": 3.0},
+        {"nome": "Lead 09", "info": "Linha 9", "status": [{"texto": "Chamando", "cor": "amarelo", "em": 0}, {"texto": "Caixa postal", "cor": "cinza", "em": 2.8}], "apagar_em": 3.4},
+        {"nome": "Próximo lote", "info": "novos números da lista", "barra": "vermelho", "status": [{"texto": "Aguardando", "cor": "cinza", "em": 0}, {"texto": "Discando", "cor": "amarelo", "em": 3.6}]}
+      ],
+      "nota": "Caixa postal identificada",
+      "nota_em": 4.2
+    },
+    {
+      "tipo": "agenda",
+      "duracao": 5,
+      "titulo": "Atendeu e topou?",
+      "dia_semana": "TER",
+      "dia": "24",
+      "evento": "Reunião agendada",
+      "detalhe": "Google Agenda",
+      "confirmacao": "Sincronizada com seu calendário",
+      "gravacao": "Ligação gravada e transcrita",
+      "nota": "Reveja o que foi combinado"
+    },
+    {
+      "tipo": "final",
+      "duracao": 4,
+      "linhas": ["Lista pronta.", "Discando sozinho.", "Mais conversa."],
+      "ultima_destaque": true,
+      "cta": "Chama no direct",
+      "assinatura": "@lig.flow"
+    }
+  ]
+}
