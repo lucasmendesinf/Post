@@ -46,5 +46,5 @@
 - [x] Calutec: da planilha ao sistema (estoque, vendas, pedidos, relatórios) (vídeo Reels + stories, 08/11)
 - [x] LigFlow: 10 chamadas simultâneas na prática (vídeo pronto, Reels + stories, 15/11)
 - [ ] Calutec: como nasce um site (briefing → layout → no ar)
-- [ ] LigFlow: um dia de prospecção com o Radar de Leads
+- [x] LigFlow: um dia de prospecção com o Radar de Leads (vídeo Reels + stories, 22/11)
 - [ ] Calutec: pedidos e delivery num só lugar
