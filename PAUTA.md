@@ -17,7 +17,7 @@
 - [x] Para o supervisor: relatórios de chamadas, minutos e custos por consultor (post único, 17/11)
 - [x] Lista de bloqueio: prospectar sem ligar para quem pediu para não receber ligação (post único, 20/11)
 - [x] Mitos da prospecção por telefone ("ninguém mais atende", "ligação fria não funciona") (carrossel, 21/11)
-- [ ] Dicas de abordagem nos primeiros 10 segundos da ligação
+- [x] Dicas de abordagem nos primeiros 10 segundos da ligação (post único, 23/11)
 - [ ] Checklist do consultor antes de começar o dia de ligações
 - [ ] Do Radar à venda: a jornada completa dentro do LigFlow
 - [ ] Escritório com equipe x consultor individual: o LigFlow serve para os dois
