@@ -18,7 +18,7 @@
 - [x] Lista de bloqueio: prospectar sem ligar para quem pediu para não receber ligação (post único, 20/11)
 - [x] Mitos da prospecção por telefone ("ninguém mais atende", "ligação fria não funciona") (carrossel, 21/11)
 - [x] Dicas de abordagem nos primeiros 10 segundos da ligação (post único, 23/11)
-- [ ] Checklist do consultor antes de começar o dia de ligações
+- [x] Checklist do consultor antes de começar o dia de ligações (carrossel, 24/11)
 - [ ] Do Radar à venda: a jornada completa dentro do LigFlow
 - [ ] Escritório com equipe x consultor individual: o LigFlow serve para os dois
 - [ ] Tempo é venda: o que fazer com as horas que você economiza
