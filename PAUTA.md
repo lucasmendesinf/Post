@@ -21,7 +21,7 @@
 - [x] Checklist do consultor antes de começar o dia de ligações (carrossel, 24/11)
 - [x] Do Radar à venda: a jornada completa dentro do LigFlow (post único, 25/11)
 - [x] Escritório com equipe x consultor individual: o LigFlow serve para os dois (carrossel, 26/11)
-- [ ] Tempo é venda: o que fazer com as horas que você economiza
+- [x] Tempo é venda: o que fazer com as horas que você economiza (post único, 27/11)
 
 ## Calutec — sites e sistemas (quinta a sábado)
 
