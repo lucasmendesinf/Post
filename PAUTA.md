@@ -23,6 +23,10 @@
 - [x] Escritório com equipe x consultor individual: o LigFlow serve para os dois (carrossel, 26/11)
 - [x] Tempo é venda: o que fazer com as horas que você economiza (post único, 27/11)
 
+### Segunda volta (ângulos novos, sem repetir texto)
+
+- [x] Celular x LigFlow, ângulo novo: "Troque a fila pelo fluxo" (um lead por vez x até 10 ao mesmo tempo + próximo lote) (carrossel, 28/11)
+
 ## Calutec — sites e sistemas (quinta a sábado)
 
 - [x] Sua empresa ainda roda em planilha? (sistema de gestão) (post único, 05/11)
